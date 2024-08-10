@@ -1,4 +1,5 @@
 const config = require("./utils/config")
+require('express-async-errors')
 const blogsRouter = require("./controllers/blogs")
 const express = require("express")
 const app = express()
