@@ -9,7 +9,11 @@ mongoose.connect(url);
 const blogSchema = new mongoose.Schema({
     blogId : String,
     title : String,
-    authorName : String
+    authorName : String,
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    }
 })
 
 blogSchema.set("toJSON",{
